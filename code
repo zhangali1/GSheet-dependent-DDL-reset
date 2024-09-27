@@ -1,0 +1,9 @@
+function onEdit(e) {
+  var row = e.range.getRow();
+  var col = e.range.getColumn();
+  
+  if (col === 1 && row === 3 && e.source.getActiveSheet().getName() === "Reset Validation" ) {
+    e.source.getActiveSheet().getRange(row,col+1).setValue('');
+  }
+   
+}
